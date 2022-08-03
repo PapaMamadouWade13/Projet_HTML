@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Structuration de pages web avec HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header">
+        <ul>
+            <li><a href="#footer">Bas de page</a></li>
+            <li><a href="#main">Corps du document</a></li>
+        </ul>
+
+
+        <h1>Première PAGE WEB</h1>
+    </header>
+
+    <main id="main">
+    <h2 >Présentation</h2>
+
+    <div>
+        <p>Je m'appelle Papa Mamadou Wade, je suis étudiant en Géomatique au Centre d'entreprenariat et de développement
+            technique de Colobane (CEDT - G15).
+            La Géomatique est une discipline qui regroupe les techniques de la géographie appliquées à l'informatique.
+            En d'autres termes, cette discipline est appelée aussi géo-informatique et fait appel à de nombreuses
+            compétences telles que la cartographie, la télédétection, le pilotage de drones, la programmation
+            informatique...
+        </p>
+        <img src="G15.jpg" alt="Image du CEDT - G15" width="50%">
+
+
+
+        <p>Je suis aussi des cours de développement web à GOMYCODE. Ce qui m'a poussé à faire cette formation est que le
+            métier de développement est un des secteurs clés du monde futur et aussi de nombreuses entreprises et
+            sociétés y ont de plus en plus recours. Aussi, le défi permanent auquel on est confronté me rend plus
+            curieux à l'idée de rejoindre cet univers merveilleux du "web-development".</p>
+        <img src="Gomycode.jpg" alt="Image de Gomycode Sénégal" width="50%">
+
+
+
+        <h2>Mon premier formulaire</h2>
+        <form method="POST" action="formulaire.html">
+            <fieldset>
+                <legend>Informations personnelles</legend>
+                <p><label for="prenom">Prénom :</label> <input id="prenom" name="username"
+                        placeholder="Entrez votre prénom" type="text"></p>
+                <p><label for="nom">Nom :</label> <input id="nom" name="lastname" placeholder="Entrez votre nom"
+                        type="text"></p>
+                <p>Sexe :<label for="gender"> Masculin</label> <input id="gender" name="genre" type="radio"> Féminin
+                    <input id="gender" name="genre" type="radio"></p>
+                <input type="reset" value="Effacer">
+                <input type="submit" value="Se connecter">
+                <p><textarea name="article_content" rows="5" cols="50"
+                        placeholder="Votre commentaire ici..."></textarea></p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Autres informations</legend>
+                <p>Système d'exploitation :
+                    <select name="ChoixOS">
+                        <option value="win">Windows</option>
+                        <option value="mac">MacOS</option>
+                        <option value="linux">Linux</option>
+                    </select>
+                </p>
+                <p>Langage de programmation :
+                    <select name="Langprog">
+                        <option value="php">PHP</option>
+                        <option value="js">Javascript</option>
+                        <option value="C#">C#</option>
+                        <option value="ruby">Ruby</option>
+                    </select>
+                </p>
+                <p>Pays d'origine :
+                    <select name="divers">
+                        <optgroup label="Afrique">
+                            <option value="senegal">Senegal</option>
+                            <option value="botswana">Botswana</option>
+                            <option value="ethiopie">Ethiopie</option>
+                            <option value="somalie">Somalie</option>
+                        </optgroup>
+
+                        <optgroup label="Europe">
+                            <option value="yougoslavie">Yougoslavie</option>
+                            <option value="ukraine" disabled>Ukraine</option>
+                            <option value="croatie">Croatie</option>
+                        </optgroup>
+
+                        <optgroup label="Amérique du Sud">
+                            <option value="argentine">Argentine</option>
+                            <option value="bresil">Brésil</option>
+                            <option value="uruguay">Uruguay</option>
+                        </optgroup>
+                    </select>
+                </p>
+                <p> Choix du Jeu : <input list="ChoixJeu">
+                    <datalist id="ChoixJeu">
+                        <option value="FIFA 22">
+                        <option value="NBA 2K22">
+                        <option value="Fortnite">
+                        <option value="Mortal Combat">
+                        <option value="Final Fantasy">
+                        <option value="Assasin's creed">
+                    </datalist>
+                </p>
+            </fieldset>
+        </form>
+        <button formmethod="POST" formaction="page.html" type="submit" target="_blank">Cliquez ici</button>
+
+        <h2>Mon tableau HTML</h2>
+        <table>
+            <caption>Liste des personnes</caption>
+            <thead>
+                <tr>
+                    <th colspan="2">Nom complet</th>
+                    <th>Age</th>
+                    <th>Sexe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Wade</td>
+                    <td>Papa Mamadou</td>
+                    <td>20</td>
+                    <td rowspan="2">Masculin</td>
+                </tr>
+                <tr>
+                    <td>Ndiaye</td>
+                    <td>Mouhamed</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>Fall</td>
+                    <td>Maguette</td>
+                    <td>45</td>
+                    <td rowspan="2">Féminin</td>
+                </tr>
+                <tr>
+                    <td>Ndiaye</td>
+                    <td>Aita Diene</td>
+                    <td>70</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Divers</h2>
+
+        <p>Je suis aussi un passionné de basket, je suis la NBA depuis deux ans maintenant et je joue aussi au centre
+            Bopp. J'aime donc passer la plupart de mes temps libres à jouer au basket ou bien à étudier de nouvelles
+            choses sur le net.</p>
+
+        <img src="nba.png" alt="Logo de la NBA" width="15%">
+        <img src="web_based.jpg" alt="Cours en ligne" width="50%">
+    </main>
+
+        <footer id="footer">
+            <h2>Mes contacts</h2>
+            <ul>
+                <li>Email : wadepapamamadoubadarasambe@gmail.com</li>
+                <li>Tel : 77 475 36 88</li>
+            </ul>
+            <p>Copyright : Août 2022 Tous droits réservés</p>
+        </footer>
+
+        <ul>
+            <li><a href="#main">Corps du document</a></li>
+            <li><a href="#header">Haut de page</a></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
